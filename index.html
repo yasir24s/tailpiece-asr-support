@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tailpiece ASR — Support</title>
+<link rel="stylesheet" href="style.css">
+<main>
+  <header><img src="icon.png" alt=""><h1>Tailpiece ASR</h1></header>
+  <p class="sub">Upscale lossy audio on your Mac. Support and help.</p>
+
+  <div class="card">
+    <strong>Need help or found a bug?</strong>
+    <p style="margin:6px 0 0"><a href="https://github.com/yasir24s/tailpiece-asr-support/issues/new">Open an issue on GitHub</a>.
+    Say which Mac and macOS version you're using, which engine you chose, and what kind of file it was (MP3, AAC, etc.).</p>
+  </div>
+
+  <h2>Getting started</h2>
+  <ul>
+    <li>Drag an audio file onto the window, or press <strong>⌘O</strong>.</li>
+    <li>Choose an engine: <strong>Harmonic Band Extension (DSP)</strong> is instant; <strong>AudioSR (diffusion)</strong>
+      generates new high-frequency detail and takes longer.</li>
+    <li>Press <strong>⌘R</strong> to upscale, then compare Before and After with <strong>⌘1</strong> / <strong>⌘2</strong>
+      and <strong>Space</strong> to play.</li>
+    <li>Save the result with <strong>⇧⌘S</strong> as WAV, FLAC or Apple Lossless.</li>
+  </ul>
+
+  <h2>Batches</h2>
+  <p>Drop several files or a folder, click <strong>Choose Folder…</strong> to pick where results go, then
+  <strong>Upscale All</strong>. Files render one after another and nothing is ever overwritten. Select a queued file and
+  press <strong>⌘⌫</strong> to remove it before it starts.</p>
+
+  <h2>Common questions</h2>
+  <p><strong>Why is AudioSR slow?</strong> It's a diffusion model running entirely on your Mac. Expect roughly 4 seconds
+  of work per second of audio at 50 steps on an M2, and more at higher step counts. The first render also loads the
+  model, which takes about 40 seconds. DSP renders in a fraction of a second.</p>
+  <p><strong>Does it recover the original audio?</strong> No. Nothing can recover what the encoder threw away. AudioSR
+  generates a plausible replacement that fits the music, and DSP extends what's already there. The spectrogram and the
+  A/B player let you judge the result for yourself.</p>
+  <p><strong>Requirements:</strong> a Mac with Apple silicon, running macOS 14 or later.</p>
+
+  <nav><a href="./">Support</a><a href="privacy.html">Privacy Policy</a> © 2026 Yasir-Ali Mahmood</nav>
+</main>
+</html>
